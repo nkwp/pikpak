@@ -3,7 +3,7 @@
     <n-collapse :default-expanded-names="['-1', '0', '2']">
       <n-collapse-item name="-1" >
         <template #header>
-          绑定telegram   <a @click.stop="" href="https://www.tjsky.net/?p=220#Telegram" target="_blank"> <n-icon style="vertical-align: middle;" size="20" color="#d03050"><zoom-question></zoom-question></n-icon> </a>
+          绑定telegram   <a @click.stop="" href="https://shimo.im/docs/gJKXjgXT9ktRJJKj/read" target="_blank"> <n-icon style="vertical-align: middle;" size="20" color="#d03050"><zoom-question></zoom-question></n-icon> </a>
         </template>
         <n-input v-model:value="telegramUrl" placeholder="复制telegram绑定链接到这"></n-input>
         <p></p>
@@ -11,7 +11,7 @@
         <a href="https://t.me/PikPak_Bot" target="_blank">Telegram机器人地址</a>
       </n-collapse-item>
       <n-collapse-item name="0" title="aria2设置">
-        <template #header>aria2设置   <a @click.stop="" href="https://www.tjsky.net/?p=220#arai2" target="_blank"> <n-icon style="vertical-align: middle;" size="20" color="#d03050"><zoom-question></zoom-question></n-icon> </a></template>
+        <template #header>aria2设置   <a @click.stop="" href="https://shimo.im/docs/gJKXjgXT9ktRJJKj/read" target="_blank"> <n-icon style="vertical-align: middle;" size="20" color="#d03050"><zoom-question></zoom-question></n-icon> </a></template>
         <n-form label-width="100px" label-align="left" label-placement="left">
           <n-form-item label="aria2链接：">
             <n-input v-model:value="aria2Data.host" placeholder="例如http://localhost:6800/jsonrpc"></n-input>
@@ -58,10 +58,7 @@
       <n-collapse-item title="关于" name="2">
         <n-space>
           <a href="https://mypikpak.com/" target="_blank" class="n-button">官方网站</a>
-          <a href="https://t.me/pikpak_userservice" target="_blank" class="n-button">官方交流群</a>
-          <a href="https://github.com/mumuchenchen/pikpak" target="_blank" class="n-button">开源仓库</a>
-          <a href="https://www.tjsky.net/?p=201" target="_blank" class="n-button">部署教程</a>
-          <a href="https://t.me/mumuchenchen" target="_blank">问题反馈</a>
+          <a href="https://shimo.im/docs/gJKXjgXT9ktRJJKj/read" target="_blank" class="n-button">使用教程</a>
         </n-space>
         <br />
       </n-collapse-item>
