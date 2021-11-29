@@ -24,7 +24,7 @@
           </n-form-item>
           <n-form-item label="">
             <a target="_blank" href="https://i.mypikpak.com/v1/file/center/account/v1/password/?type=forget_password&locale=zh-cn" class="forget-password">忘记密码</a>
-            <a target="_blank" href="http://8.210.204.30:8888/down/tq699rtJyw4S">去下载注册</a>
+            <a href="javascript:;" @click="getApk">去下载注册</a>
           </n-form-item>
         </n-form>
         <n-tooltip >
@@ -98,7 +98,7 @@ const showMessage = () => {
   }
 }
 const getApk = () => {
-  http.get('http://8.210.204.30:8888/down/tq699rtJyw4S')
+  http.get('https://api-drive.mypikpak.com/package/v1/apk/url/300810')
     .then((res:any) => {
       window.open(res.data.apk_url)
     })
