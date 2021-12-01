@@ -27,14 +27,28 @@
             <a href="javascript:;" @click="getApk">去下载注册</a>
           </n-form-item>
         </n-form>
-        <n-tooltip >
-          <template #trigger>
-            <n-icon color="#306eff" :size="32" class="google-tips">
-              <brand-google></brand-google>
-            </n-icon>
-          </template>
-          APP内谷歌登录的账号请先通过忘记密码设置密码后登录
-        </n-tooltip>
+        <div class="login-other">
+          <n-space inline>
+            <n-tooltip >
+              <template #trigger>
+                <router-link to="sms">
+                  <n-icon color="#306eff" :size="32">
+                   <phone></phone>
+                  </n-icon>
+                </router-link>
+              </template>
+              手机登陆
+            </n-tooltip>
+            <n-tooltip >
+              <template #trigger>
+                <n-icon color="#306eff" :size="32">
+                  <brand-google></brand-google>
+                </n-icon>
+              </template>
+              APP内谷歌登录的账号请先通过忘记密码设置密码后登录
+            </n-tooltip>
+          </n-space>
+        </div>
       </div>
     </div>
   </div>
@@ -42,10 +56,10 @@
 
 <script setup lang='ts'>
 import { ref } from '@vue/reactivity';
-import { NForm, NFormItem, NInput, NButton, useMessage, NCheckbox, useDialog, NTooltip, NIcon } from 'naive-ui'
+import { NForm, NFormItem, NInput, NButton, useMessage, NCheckbox, useDialog, NTooltip, NIcon, NSpace } from 'naive-ui'
 import http from '../utils/axios'
 import { useRouter } from 'vue-router'
-import { BrandGoogle } from '@vicons/tabler'
+import { BrandGoogle, Phone } from '@vicons/tabler'
 const loginData = ref({
   username: '',
   password: ''
@@ -173,11 +187,10 @@ const getApk = () => {
   .login-page .n-form-item a {
     color: #306eff;
   }
-  .login-page .google-tips {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    margin-left: -16px;
+  .login-box .login-other {
+    margin-top: -50px;
+    text-align: center;
+    padding-bottom: 10px;
   }
   @media(max-width: 968px) {
     .login-page {
